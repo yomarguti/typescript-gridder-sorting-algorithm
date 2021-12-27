@@ -1,6 +1,19 @@
 "use strict";
-console.log('Hi there!');
-console.log('New call to tsc');
-const logSomething = () => {
-    console.log('New console log function');
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+const CharactersCollection_1 = require("./CharactersCollection");
+const LinkedList_1 = require("./LinkedList");
+const NumbersCollection_1 = require("./NumbersCollection");
+const numbersCollection = new NumbersCollection_1.NumbersCollection([3, 1, 9, 23, -7, -45]);
+numbersCollection.sort();
+console.log(numbersCollection.data);
+const characterCollection = new CharactersCollection_1.CharactersCollection('YomarGuti');
+characterCollection.sort();
+console.log(characterCollection.data);
+const linkedList = new LinkedList_1.LinkedList();
+linkedList.add(5);
+linkedList.add(10);
+linkedList.add(2);
+linkedList.add(-2);
+linkedList.print();
+linkedList.sort();
+linkedList.print();
